@@ -48,6 +48,7 @@ nav.nav-small{
 	background-color: #FB8C00;
 	position: fixed;
 	box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+	z-index:2;
 }
 nav.nav-small ul{
 	position: fixed;
@@ -85,8 +86,10 @@ nav.nav-small ul li a:hover{
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 }
 .banner-opacity{
+	position: relative;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0,.23);
@@ -173,7 +176,9 @@ nav.nav-small ul li a:hover{
 .news-banner{
 	height: 250px;
 	width: 100%;
-	background-color: rgba(0,0,0,.23);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .news h2{
 	line-height: 65px;
@@ -204,6 +209,82 @@ nav.nav-small ul li a:hover{
 	text-decoration: none;
 	color:#f5f5f5;
 	transition:all 0.3s, tranform 0.3s;
+}
+.news-full{
+	margin-top:50px;
+}
+.news-full h2{
+	height: 45px;
+	line-height: 45px;
+	padding-left:20px;
+	background-color: #323232;
+	color: #f5f5f5;
+	text-transform: uppercase;
+	border-left:5px solid #FB8C00;
+}
+.news-full p{
+	width: 92%;
+	padding:20px;
+	line-height: 25px;
+}
+.auteur{
+	position: absolute;
+	bottom:0;
+	right: 0;
+	height: 45px;
+	line-height: 45px;
+	padding:0 30px;
+	background-color: rgba(0,0,0,.53);
+	color: #f5f5f5;
+	border-top:2px solid #FB8C00;
+	border-left:2px solid #FB8C00;
+	z-index:0;
+}
+.date{
+	position: absolute;
+	z-index: 0;
+	bottom:0;
+	left: 0;
+}
+.date span{
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	padding:0 20px;
+	font-weight: bolder;
+	font-size: 1.2em;
+	float: left;
+}
+.day{
+	background-color: #FB8C00;
+	color: #f5f5f5;
+	border-top:2px solid #323232;
+	border-right:2px solid #323232;
+}
+.mounth{
+	background-color: #f5f5f5;
+	color: #323232;
+	border-top:2px solid #323232;
+	border-right:2px solid #323232;
+}
+.tags{
+	text-align: right;
+}
+.tags a{
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	padding:0 10px;
+	background-color: #FB8C00;
+	color:#f5f5f5;
+	text-decoration: none;
+	transition:all 0.3s, transform 0.3s;
+}
+.tags a:hover{
+	background-color: #F57C00;
+}
+.news-full p br{
+	line-height: 60px;
 }
 .team{
 	text-align: center;

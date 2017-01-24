@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$news = App\News::orderBy('created_at', 'desc')->orderBy('id', 'desc')->take(3)->get();
+    return view('welcome', ['news' => $news]);
 });
+
+Route::get('blog', 'blogController@index');
+Route::get('blog/{slug}', 'blogController@show');
 
 Route::get('/team', function(){
 	return view('team');

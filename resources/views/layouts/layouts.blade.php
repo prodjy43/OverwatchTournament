@@ -13,6 +13,7 @@
 	<nav class="nav-big hide-on-mobile hide-on-tablet">
 		<ul class="nav-left">
 			<li><a href="/">Accueil</a></li>
+			<li><a href="/">Blog</a></li>
 			<li><a href="#">Tournois en live</a></li>
 			<li><a href="/team">Equipe</a></li>
 			<li><a href="#">Programmation</a></li>
@@ -27,6 +28,9 @@
                         {{ csrf_field() }}
                     </form>
                 </li>
+                @if (Auth::user()->grade_id == '2')
+                	<li><a href="#">Administration</a></li>
+                @endif
 			@else
 				<li><a href="/login">Connexion</a></li>
 				<li><a href="/register">Inscription</a></li>
@@ -37,6 +41,7 @@
 		<a href="#!" class="fa fa-bars menu-btn fa-2x"></a>
 		<ul>
 			<li><a href="/">Accueil</a></li>
+			<li><a href="/">Blog</a></li>
 			<li><a href="#">Tournois en live</a></li>
 			<li><a href="/team">Equipe</a></li>
 			<li><a href="#">Programmation</a></li>
@@ -44,6 +49,9 @@
 			<li><a href="/about">A propos</a></li>
 			@if (Auth::check())
 				<li><a href="#">Mon compte</a></li>
+				@if (Auth::user()->grade_id == '2')
+                	<li><a href="#">Administration</a></li>
+                @endif
 				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a>
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
