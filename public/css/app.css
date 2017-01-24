@@ -295,6 +295,11 @@ form label{
 form button{
 	margin-bottom: 20px !important;
 }
+.checkbox{
+	height: 25px;
+	width: 25px !important;
+	margin-top:28px;
+}
 footer{
 	min-height: 65px;
 	background-color: #323232;
