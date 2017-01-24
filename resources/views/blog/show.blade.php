@@ -12,12 +12,17 @@
 <div class="grid-container container">
     <div class="grid-100 news-full">
         <h2>{{ $post->title }}</h2>
-        <p>{{$post->content}}</p>
+        <p>{!! $post->content !!}</p>
         <div class="tags">
             <i>Tags :</i>
             @foreach ($post->tags as $tag)
                 <span><a href="/tags/{{$tag->name}}">#{{ $tag->name }}</a></span>
             @endforeach
+        </div>
+        <div class="share">
+            <a href="#" class="btn-share" title="Partager sur facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="btn-share" title="Partager sur twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="btn-share" title="Partager sur google +"><i class="fa fa-google-plus"></i></a>
         </div>
     </div>
 </div>

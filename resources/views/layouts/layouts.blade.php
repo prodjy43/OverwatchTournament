@@ -13,7 +13,7 @@
 	<nav class="nav-big hide-on-mobile hide-on-tablet">
 		<ul class="nav-left">
 			<li><a href="/">Accueil</a></li>
-			<li><a href="/">Blog</a></li>
+			<li><a href="/blog">Blog</a></li>
 			<li><a href="#">Tournois en live</a></li>
 			<li><a href="/team">Equipe</a></li>
 			<li><a href="#">Programmation</a></li>
@@ -41,7 +41,7 @@
 		<a href="#!" class="fa fa-bars menu-btn fa-2x"></a>
 		<ul>
 			<li><a href="/">Accueil</a></li>
-			<li><a href="/">Blog</a></li>
+			<li><a href="/blog">Blog</a></li>
 			<li><a href="#">Tournois en live</a></li>
 			<li><a href="/team">Equipe</a></li>
 			<li><a href="#">Programmation</a></li>

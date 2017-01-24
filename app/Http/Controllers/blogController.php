@@ -9,7 +9,7 @@ class blogController extends Controller
 {
     public function index()
     {
-        $news = News::orderBy('created_at', 'desc')->orderBy('id_news', 'desc')->get();
+        $news = News::orderBy('created_at', 'desc')->orderBy('id', 'desc')->get();
         return view('blog.index', ['news' => $news]);
     }
 
