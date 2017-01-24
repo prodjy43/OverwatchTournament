@@ -22,3 +22,4 @@ Route::get('/team', function(){
 Route::get('/about', function(){
 	return view('about');
 });
+Auth::routes();

@@ -11,13 +11,17 @@
 </head>
 <body>
 	<nav class="nav-big hide-on-mobile hide-on-tablet">
-		<ul>
+		<ul class="nav-left">
 			<li><a href="/">Accueil</a></li>
 			<li><a href="#">Tournois en live</a></li>
-			<li><a href="team">Equipe</a></li>
+			<li><a href="/team">Equipe</a></li>
 			<li><a href="#">Programmation</a></li>
 			<li><a href="#">Resultats</a></li>
 			<li><a href="/about">A propos</a></li>
+		</ul>
+		<ul class="nav-right">
+			<li><a href="/login">Connexion</a></li>
+			<li><a href="/register">Inscription</a></li>
 		</ul>
 	</nav>
 	<nav class="nav-small hide-on-desktop">
@@ -29,6 +33,8 @@
 			<li><a href="#">Programmation</a></li>
 			<li><a href="#">Resultats</a></li>
 			<li><a href="/about">A propos</a></li>
+			<li><a href="/login">Connexion</a></li>
+			<li><a href="/register">Inscription</a></li>
 		</ul>
 	</nav>
 	
