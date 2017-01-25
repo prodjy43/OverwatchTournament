@@ -2,7 +2,8 @@
 @section('content')
 
     <div class="grid-container container">
-        <form class="grid-100" role="form" method="POST" action="/admin/add/news">
+        <form class="grid-100" role="form" method="POST" action="/admin/add/news/{{ $post->slug }}">
+            <input name="_method" type="hidden" value="PUT">
             <h1>Editer une news</h1>
             {{ csrf_field() }}
 

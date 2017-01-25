@@ -39,7 +39,7 @@ class adminController extends Controller
         }
         $post = $request->all();
         $npost = News::create(['title' => $post['title'], 'slug' => str_slug($post['title']), 'content' => $post['content'], 'user_id' => Auth::user()->id]);
-        $npost->tags()->attach($tid);
+        $npost->tags()->sync($tid);
 
         return redirect('/admin');
     }
@@ -48,5 +48,25 @@ class adminController extends Controller
         $tags = Tag::all();
         $post = News::where('slug', '=', $slug)->first();
         return view('admin.editNews', ['post' => $post, 'tags' => $tags]);
+    }
+
+    public function updateNews(Request $request, $slug){
+        $tags = $request->all()['tags'];
+        $tid = [];
+        foreach($tags as $tag){
+            if(intval($tag) === 0){
+                $ntag = Tag::create(['name' => $tag]);
+                array_push($tid, $ntag->id);
+            }
+            else{
+                array_push($tid, intval($tag));
+            }
+        }
+
+        $post = $request->all();
+        News::where('slug', '=', $slug)->update(['title' => $post['title'], 'content' => $post['content']]);
+        $upost = News::where('slug', '=', $slug)->first();
+        $upost->tags()->sync($tid);
+        return redirect('/admin/edit/news/'.$slug);
     }
 }

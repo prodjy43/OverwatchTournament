@@ -12,7 +12,7 @@
 <div class="grid-container container">
     <div class="grid-100 news-full">
         <h2>{{ $post->title }}</h2>
-        <p>{!! $post->content !!}</p>
+        {!! $post->content !!}
         <div class="tags">
             <i>Tags :</i>
             @if ($post->tags->isEmpty())

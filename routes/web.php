@@ -34,6 +34,8 @@ Route::get('/stream', function(){
 	return view('stream');
 });
 
+Route::get('/tags/{name}', 'blogController@searchTag');
+
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 	Route::get('/', 'adminController@index');
 	Route::delete('/', 'adminController@delete');
@@ -41,6 +43,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 	Route::get('/add/news', 'adminController@createNews');
 	Route::post('/add/news', 'adminController@storeNews');
 
+	Route::put('/add/news/{slug}', 'adminController@updateNews');
 	Route::get('/edit/news/{slug}', 'adminController@editNews');
 });
 

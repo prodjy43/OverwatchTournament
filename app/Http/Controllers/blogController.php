@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
+use App\Tag;
 
 class blogController extends Controller
 {
@@ -17,5 +18,18 @@ class blogController extends Controller
     {
         $post = News::where('slug', '=', $slug)->first();
         return view('blog.show', ['post' => $post]);
+    }
+
+    public function searchTag($name){
+        $tag = Tag::where('name', '=', $name)->first();
+        if(!empty($tag)){
+            $news = $tag->news;
+            $tag = $tag->name;
+        }else{
+            $tag = $name;
+            $news = null;
+        }
+        
+        return view('blog.tag',['tag' => $tag, 'news' => $news]);
     }
 }
