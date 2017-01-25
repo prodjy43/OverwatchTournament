@@ -14,7 +14,7 @@
 		<ul class="nav-left">
 			<li><a href="/">Accueil</a></li>
 			<li><a href="/blog">Blog</a></li>
-			<li><a href="#">Tournois en live</a></li>
+			<li><a href="/stream">Tournois en live</a></li>
 			<li><a href="/team">Equipe</a></li>
 			<li><a href="#">Programmation</a></li>
 			<li><a href="#">Resultats</a></li>
@@ -23,11 +23,7 @@
 		<ul class="nav-right">
 			@if (Auth::check())
 				<li><a href="#">Mon compte</a></li>
-				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a>
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </li>
+				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a></li>
                 @if (Auth::user()->grade_id == '2')
                 	<li><a href="#">Administration</a></li>
                 @endif
@@ -42,7 +38,7 @@
 		<ul>
 			<li><a href="/">Accueil</a></li>
 			<li><a href="/blog">Blog</a></li>
-			<li><a href="#">Tournois en live</a></li>
+			<li><a href="/stream">Tournois en live</a></li>
 			<li><a href="/team">Equipe</a></li>
 			<li><a href="#">Programmation</a></li>
 			<li><a href="#">Resultats</a></li>
@@ -52,17 +48,16 @@
 				@if (Auth::user()->grade_id == '2')
                 	<li><a href="#">Administration</a></li>
                 @endif
-				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a>
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </li>
+				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a></li>
 			@else
 				<li><a href="/login">Connexion</a></li>
 				<li><a href="/register">Inscription</a></li>
 			@endif
 		</ul>
 	</nav>
+	 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+		{{ csrf_field() }}
+	</form>
 	
 	@yield('content')
 

@@ -15,9 +15,13 @@
         <p>{!! $post->content !!}</p>
         <div class="tags">
             <i>Tags :</i>
-            @foreach ($post->tags as $tag)
-                <span><a href="/tags/{{$tag->name}}">#{{ $tag->name }}</a></span>
-            @endforeach
+            @if ($post->tags->isEmpty())
+                <strong>Aucun tag !</strong>
+            @else
+                @foreach ($post->tags as $tag)
+                    <span><a href="/tags/{{$tag->name}}">#{{ $tag->name }}</a></span>
+                @endforeach
+            @endif
         </div>
         <div class="share">
             <a href="#" class="btn-share" title="Partager sur facebook"><i class="fa fa-facebook"></i></a>

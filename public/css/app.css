@@ -103,6 +103,15 @@ nav.nav-small ul li a:hover{
 	line-height: 200px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.23);
 }
+.stream-banner{
+	height: 65%;
+	width: 100%;
+	box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+.stream-banner div{
+	height: 100%;
+	padding: 0;
+}
 .btn{
 	display: block;
 	width: 320px;
@@ -306,7 +315,7 @@ nav.nav-small ul li a:hover{
 }
 .share{
 	text-align: center;
-	margin-top: 50px;
+	margin:50px 0;
 }
 .btn-share{
 	display: inline-block;
@@ -432,6 +441,10 @@ footer{
 /*Media query for responsive*/
 @media (max-width: 1024px) {
 	.banner{
+		height: calc(100% - 65px);
+		padding-top: 65px;
+	}
+	.stream-banner{
 		height: calc(100% - 65px);
 		padding-top: 65px;
 	}

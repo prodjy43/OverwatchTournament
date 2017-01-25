@@ -26,4 +26,8 @@ Route::get('/team', function(){
 Route::get('/about', function(){
 	return view('about');
 });
+
+Route::get('/stream', function(){
+	return view('stream');
+});
 Auth::routes();
