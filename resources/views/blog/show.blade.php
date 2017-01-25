@@ -24,7 +24,7 @@
             @endif
         </div>
         <div class="share">
-            <a href="http://www.facebook.com/sharer.php?s=100&p[title]=Nouvelle news sur Overwatch Swiss Tournament&p[url]={{ Request::url() }}&p[summary]=Allez regarder la nouvelle news sur le site Overwatch Swiss Stream !!! C'est allucinant&p[images][0]={{ URL::to('/')}}images/news/{{ $post->images }}" class="btn-share" title="Partager sur facebook"><i class="fa fa-facebook"></i></a>
+            <a href="http://www.facebook.com/sharer.php?s=100&p[title]=Nouvelle news sur Overwatch Swiss Tournament&p[url]={{ Request::url() }}&p[summary]=Allez regarder la nouvelle news sur le site Overwatch Swiss Stream !!! C'est allucinant&p[images][0]={{ URL::to('/')}}/images/news/{{ $post->images }}" class="btn-share" title="Partager sur facebook"><i class="fa fa-facebook"></i></a>
             <a href="http://twitter.com/share?text={{ $post->title }} - Overwatch Swiss Tournament&url={{ Request::url() }}&hashtags=@foreach($post->tags as $tag){{ $tag->name }},@endforeach" class="btn-share" title="Partager sur twitter"><i class="fa fa-twitter"></i></a>
             <a href="https://plus.google.com/share?url={{ Request::url() }}" class="btn-share" title="Partager sur google +"><i class="fa fa-google-plus"></i></a>
         </div>
