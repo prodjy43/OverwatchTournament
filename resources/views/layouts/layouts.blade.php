@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/app.css">
 	<link rel="stylesheet" type="text/css" href="/css/unsemantic-grid-responsive-tablet.css">
 	<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+	<link rel="stylesheet" href="text/css" href="/css/select2.css">
 </head>
 <body>
 	<nav class="nav-big hide-on-mobile hide-on-tablet">
@@ -25,7 +26,7 @@
 				<li><a href="#">Mon compte</a></li>
 				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a></li>
                 @if (Auth::user()->grade_id == '2')
-                	<li><a href="#">Administration</a></li>
+                	<li><a href="/admin">Administration</a></li>
                 @endif
 			@else
 				<li><a href="/login">Connexion</a></li>
@@ -46,7 +47,7 @@
 			@if (Auth::check())
 				<li><a href="#">Mon compte</a></li>
 				@if (Auth::user()->grade_id == '2')
-                	<li><a href="#">Administration</a></li>
+                	<li><a href="/admin">Administration</a></li>
                 @endif
 				<li><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Déconnexion</a></li>
 			@else
@@ -94,6 +95,7 @@
 		</div>
 	</footer>
 	<script src="/js/jquery.js"></script>
+	<script src="/js/select2.js"></script>
 	<script src="/js/app.js"></script>
 </body>
 </html>

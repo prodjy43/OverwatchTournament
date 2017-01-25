@@ -16,8 +16,11 @@ Route::get('/', function () {
     return view('welcome', ['news' => $news]);
 });
 
-Route::get('blog', 'blogController@index');
-Route::get('blog/{slug}', 'blogController@show');
+
+Route::group(['prefix' => 'blog'], function() {
+	Route::get('/', 'blogController@index');
+	Route::get('/{slug}', 'blogController@show');
+});
 
 Route::get('/team', function(){
 	return view('team');
@@ -30,4 +33,15 @@ Route::get('/about', function(){
 Route::get('/stream', function(){
 	return view('stream');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
+	Route::get('/', 'adminController@index');
+	Route::delete('/', 'adminController@delete');
+
+	Route::get('/add/news', 'adminController@createNews');
+	Route::post('/add/news', 'adminController@storeNews');
+
+	Route::get('/edit/news/{slug}', 'adminController@editNews');
+});
+
 Auth::routes();

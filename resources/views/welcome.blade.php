@@ -5,7 +5,7 @@
             <h1>Overwatch swiss tournament</h1>
             <div class="grid-container">
                 <div class="grid-50">
-                    <a href="#" class="btn btn-full">Tournois en live</a>
+                    <a href="/stream" class="btn btn-full">Tournois en live</a>
                 </div>
                 <div class="grid-50">
                     <a href="/about" class="btn btn-thin">A propos</a>
