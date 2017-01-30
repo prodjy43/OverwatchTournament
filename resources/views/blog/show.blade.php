@@ -29,5 +29,8 @@
             <a href="https://plus.google.com/share?url={{ Request::url() }}" class="btn-share" title="Partager sur google +"><i class="fa fa-google-plus"></i></a>
         </div>
     </div>
+    <div class="grid-container news-full">
+        <h2>Commentaires</h2>
+    </div>
 </div>
 @stop
