@@ -322,6 +322,18 @@ nav.nav-small ul li a:hover{
 	text-align: center;
 	margin:50px 0;
 }
+.comment{
+  background-color: #eeeeee;
+  margin: 20px 0;
+  border-radius: 5px;
+  border:1px solid #cccccc;
+}
+.link{
+  display: inline-block;
+  font-weight: normal !important;
+  color: #3875d7 !important;
+  padding:10px;
+}
 table{
 	margin:50px 0;
 	width: 100%;

@@ -29,8 +29,16 @@
             <a href="https://plus.google.com/share?url={{ Request::url() }}" class="btn-share" title="Partager sur google +"><i class="fa fa-google-plus"></i></a>
         </div>
     </div>
-    <div class="grid-container news-full">
+    <div class="grid-container news-full grid-parent">
         <h2>Commentaires</h2>
+        <div class="comment grid-100">
+            <h3>Pseudo de la personne</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et numquam aspernatur temporibus earum, pariatur doloremque molestias optio explicabo eveniet a ea ad fuga. Repudiandae magnam natus enim placeat tempora!</p>
+            <div class="comment-footer">
+                <span class="like"><i class="fa fa-heart-o"></i></span>
+                <a href="#" class="link">Répondre</a>
+            </div>
+        </div>
     </div>
 </div>
 @stop
